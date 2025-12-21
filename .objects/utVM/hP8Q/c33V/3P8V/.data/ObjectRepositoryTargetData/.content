@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="l9-S7K5lGUeD19XMGAkNEA" Reference="Eieooa4AokeKB5AaXhMR2A/3P8VjTZ_Pkax4yARuz7Gdg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="btats.odoo.com/odoo/customer-credit-notes/41" DesignTimeRectangle="59, 571, 841, 21" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='{0}' tag='TEXTAREA' /&gt;&quot;, AddLineIndex)]" Guid="6404a95b-1323-4eb3-8cc0-d312c2fad9b3" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Draft Credit Note' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="48101872d3ead641e955cfc4918dd18a.png" xmlns="">0RTJQRRIguUabhkoHZTPw6w</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData DefaultValue="2" Name="AddLineIndex" />
+    </scg:List>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

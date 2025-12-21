@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="OMsyc9cb2E6XQGZDHHxWow" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="btats.odoo.com/odoo/customer-invoices/7" DesignTimeRectangle="464, 562, 103, 41" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl name='quantity' tag='TD' class='o_data_cell cursor-pointer o_field_cell o_list_number' colName='Quantity' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td' /&gt;" Guid="13e742a3-0239-4a1e-8b63-f335ebee5d80" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Draft Invoice' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="a4d18ff4fbf82c2f13fe6ac7b22cb5cc.png" xmlns="">0gp8rwMYgw02r2dpw8ZtCtA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

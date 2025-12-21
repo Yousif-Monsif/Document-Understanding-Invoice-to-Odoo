@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="binSOC4b8EKbexS-CRnnUA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="btats.odoo.com/odoo/customer-invoices/27" CVScreenId="8da36a56-774e-4371-9a68-69420ae53a75" CvTextArea="181, 424, 190, 13" CvTextArgument="Switch into invoice/credit note" CvType="Text" DesignTimeRectangle="162, 417, 228, 27" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Switch into invoice/credit note' aria-role='menuitem' tag='SPAN' /&gt;" Guid="28ef83f9-208d-4e86-9660-ea32e7143f46" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Draft Invoice' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="c48e3241ca874d01c4434cd5bf3d7870.png" xmlns="">0Hn05c_v1O0ewQMEQg_A5Nw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

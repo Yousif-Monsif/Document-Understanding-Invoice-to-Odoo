@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="9uBBOqc2t0WCSnvelekTKA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="btats.odoo.com/odoo/customer-invoices/7" DesignTimeRectangle="751, 399, 489, 24" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='invoice_date_0' tag='INPUT' type='text' class='o_input cursor-pointer text-primary' placeholder='Today' aaname='Invoice Date' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="4433ba62-e30b-4c6b-9496-5cdb73f0e5e0" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Draft Invoice' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="656, 399, 79, 21" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Invoice Date' tag='LABEL' type='' class='o_form_label' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Invoice Date' /&gt;" Guid="0106b932-792e-4dbe-9ed5-9c37d54bc221" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="1fce0dda8d06769bc803985504bd543f.png" xmlns="">0tBXLL1bSGE-QWHRAD_2azw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

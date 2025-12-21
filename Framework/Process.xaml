@@ -1,0 +1,557 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Process" this:Process.in_TransactionItem="C:\Users\Administrator\Documents\UiPath\Process Monthly Invoices\Data\Input\PDF to use\invoice_10366.pdf" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uisad="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction;assembly=UiPath.IntelligentOCR.StudioWeb.Activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Transaction item to be processed." Name="in_TransactionItem" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>818.4,454.4</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="100">
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Windows.Forms</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.DocumentClassification</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.DataExtraction</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Results</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Dom</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.ExtendedExtractionResultsForDocumentData.InvoicesDataExtractorInvoicesV1.Bundle</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Classification</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Taxonomy</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.TaxonomyManagement</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Digitization</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.DataExtraction</x:String>
+      <x:String>UiPath.DU.Shared.Utils</x:String>
+      <x:String>UiPath.Platform</x:String>
+      <x:String>System.Globalization</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Windows.Documents</x:String>
+      <x:String>System.Windows.Media.Animation</x:String>
+      <x:String>System.Windows</x:String>
+      <x:String>System.Windows.Threading</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.UIAutomationNext.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Triggers</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="160">
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.StudioWeb.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentProcessing.Contracts</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>ExtendedExtractionRe.x7Rl81czcBS1EnuCa1iwQUd3</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR</AssemblyReference>
+      <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>PresentationUI</AssemblyReference>
+      <AssemblyReference>System.Windows.Presentation</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="1281,8158" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="ResultDT" />
+      <Variable x:TypeArguments="s:DateTime" Name="ParsedDate" />
+      <Variable x:TypeArguments="uisad:IDocumentData(uisad:DictionaryData)" Name="InvoiceData" />
+      <Variable x:TypeArguments="x:String" Name="StrInvoiceData" />
+      <Variable x:TypeArguments="s:String[]" Name="StrLines" />
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="rowIndex" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="590,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
+    <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="590,89" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
+    <p:ExtractDocumentDataWithDocumentData x:TypeArguments="uisad:DictionaryData" DocumentBounds="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" ExtractorDocumentType="{x:Null}" ExtractorResult="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" Prompt="{x:Null}" RuntimeAssetPath="{x:Null}" RuntimeTenantUrl="{x:Null}" ApplyAutoValidation="False" DisplayName="Extract Document Data -Read Pdf and Get data" DocType="a7411fa7-70d4-f011-8195-002248872675" ExtractionResults="[InvoiceData]" FileInput="[LocalResource.FromPath(in_TransactionItem)]" GenerateData="False" sap:VirtualizedContainerService.HintSize="590,383" sap2010:WorkflowViewState.IdRef="ExtractDocumentDataWithDocumentData`1_1" ModernDocumentTypeId="39f5ff61-54d4-f011-8195-000d3a386ad1" ProjectId="b91d3155-54d4-f011-8196-6045bd8fd9ce" ProjectTag="[Nothing]" ProjectVersionNumber="1" TimeoutInSeconds="3600">
+      <p:ExtractDocumentDataWithDocumentData.AutoValidationConfidenceThreshold>
+        <InArgument x:TypeArguments="s:Nullable(x:Int32)">
+          <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="0" />
+        </InArgument>
+      </p:ExtractDocumentDataWithDocumentData.AutoValidationConfidenceThreshold>
+      <p:ExtractDocumentDataWithDocumentData.GptPromptWithVariables>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </p:ExtractDocumentDataWithDocumentData.GptPromptWithVariables>
+    </p:ExtractDocumentDataWithDocumentData>
+    <Assign sap:VirtualizedContainerService.HintSize="590,175" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:DateTime">[ParsedDate]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:DateTime">[DateTime.ParseExact(InvoiceData.Data.GetFieldValue("Order Date").Value.ToString, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture)]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="590,175" sap2010:WorkflowViewState.IdRef="Assign_6">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[StrInvoiceData]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[InvoiceData.ToString]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="590,175" sap2010:WorkflowViewState.IdRef="Assign_7">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[StrInvoiceData]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[StrInvoiceData.Split("items Table data:")(1)]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="590,175" sap2010:WorkflowViewState.IdRef="Assign_8">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:String[]">[StrLines]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:String[]">[StrInvoiceData.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:BuildDataTable DataTable="[ResultDT]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="590,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Product_x0020_ID&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Quantity&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Description&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Unit_x0020_Price&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentText" sap:VirtualizedContainerService.HintSize="590,578" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[strlines.Skip(1)]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:String">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:String" Name="currentText" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,447" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="s:String[]" Name="columns" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_9">
+              <Assign.To>
+                <OutArgument x:TypeArguments="s:String[]">[columns]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="s:String[]">[currentText.Split("|"c)]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{ columns(0).Trim,&#xA;  columns(1).Trim,&#xA;  columns(2).Trim,&#xA;  columns(3).Trim }]" DataTable="[ResultDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="416,212" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Home" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="590,6041" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="76b88522-5251-47bc-9806-0e88a26c5bc2" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="556,5800" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Int32" Default="2" Name="AddLineIndex" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGoToUrl DisplayName="Go To URL - odoo.com" sap:VirtualizedContainerService.HintSize="522,123" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" ScopeIdentifier="76b88522-5251-47bc-9806-0e88a26c5bc2" Url="https://btats.odoo.com/odoo/customer-invoices" Version="V5" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'New'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="522,190" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="76b88522-5251-47bc-9806-0e88a26c5bc2" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="btats.odoo.com/odoo/customer-invoices" ContentHash="NXOWjQ8yYk-4SbslFpKuYA" DesignTimeRectangle="24, 201, 51, 33" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='button' aaname=' New ' class='btn btn-primary o_list_button_add' /&gt;" Guid="d1c64f13-4875-4b84-be49-4cf6335ee32d" InformativeScreenshot="38d2945a88c92d2cf9d6c376472eac65.png" Reference="Eieooa4AokeKB5AaXhMR2A/EiL7FvHP9UmqGxVOdcu1aQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Invoices' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'I'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="522,227" sap2010:WorkflowViewState.IdRef="NClick_10" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="76b88522-5251-47bc-9806-0e88a26c5bc2" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="btats.odoo.com/odoo/customer-invoices/27" CVScreenId="8c1c9230-f0e6-4a23-a0bd-03c2c42f499a" ContentHash="cAdBgJGdbkKA-qurQlMSAA" CvElementArea="161, 217, 18, 18" CvType="Icon" DesignTimeRectangle="161, 219, 18, 14" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;i' tag='I' /&gt;" Guid="b686a242-0828-4127-85c1-0fad5559555d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABYAAAASCAYAAABfJS4tAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD+SURBVDhP3ZM9CsJAEIU9jYUH8AbiEbSxChYirIUgCBYSCFiLlWkCgjZpjIidNgaLxC5CtokIe4/nxkQ0OBHFH9DiK5bhfQyzvEw2l8cn+FuxhhkXEELAn2vE/JY7Yobheg9/qaPRtOBIaSgWriXfOlZ8D1tnRC4iVdyZ8kh0Fw+TOp1P37hqwA4o2YVgY0ChshJSXKgwqP0FnEMsCbaYtMtyVkZrvEVwlrsmVMZQKt46SPFwEwdjnJFyNVdguMm5rSfzId8Vh6eoqeYDp7DQaz9xihOf+LyQ2tgjZUk4Zl06n76xLMhgyeGvDXTeWZAkstK7SPyGSr/Gr4nzOAJSzx9KqWiV3QAAAABJRU5ErkJggg==" InformativeScreenshot="3b624f69d3fccc55d591273f6abf823e.png" Reference="Eieooa4AokeKB5AaXhMR2A/Sswr6LhAjUK2UQKc4GQyNw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Draft Invoice' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Switch into invoicecre…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="522,227" sap2010:WorkflowViewState.IdRef="NClick_11" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="76b88522-5251-47bc-9806-0e88a26c5bc2" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="btats.odoo.com/odoo/customer-invoices/27" CVScreenId="8da36a56-774e-4371-9a68-69420ae53a75" ContentHash="binSOC4b8EKbexS-CRnnUA" CvTextArea="181, 424, 190, 13" CvTextArgument="Switch into invoice/credit note" CvType="Text" DesignTimeRectangle="162, 417, 228, 27" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Switch into invoice/credit note' aria-role='menuitem' tag='SPAN' /&gt;" Guid="28ef83f9-208d-4e86-9660-ea32e7143f46" InformativeScreenshot="c48e3241ca874d01c4434cd5bf3d7870.png" Reference="Eieooa4AokeKB5AaXhMR2A/j1tPVNUFPki2-YgUmn3Wmg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Draft Invoice' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" ClipboardMode="Never" DisplayName="Type Into 'Customer Invoice'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="522,251" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="76b88522-5251-47bc-9806-0e88a26c5bc2" Text="[&quot;Invoice&quot;+InvoiceData.Data.GetFieldValue(&quot;Order ID&quot;).Value.ToString+&quot; &quot;+InvoiceData.Data.GetFieldValue(&quot;Order Date&quot;).Value.ToString]" Version="V5">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="btats.odoo.com/odoo/customer-invoices/30" ContentHash="EP_nMOW0IEuRzbwlD37B5w" DesignTimeRectangle="41, 292, 899, 43" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='name_0' tag='INPUT' class='o_input' parentclass='o_field_widget o_field_char' /&gt;" Guid="9c0cc590-ff61-4931-a965-a2689504f1f9" InformativeScreenshot="f75595507128a78f92bd844dfe153a0e.png" IsResponsive="True" Reference="Eieooa4AokeKB5AaXhMR2A/DqT3FN2UC0qNgxAy8PMhSw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Draft Credit Note' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="41, 267, 139, 19" ElementType="Text" FullSelectorArgument="&lt;webctrl parentname='move_type' tag='SPAN' aaname='Customer Credit Note' /&gt;" Guid="2b8e22af-fa2f-4b3d-a7d2-8c0b9073d00d" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" ClipboardMode="Never" DisplayName="Type Into 'Invoice Date'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="522,251" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="DebuggerApi" ScopeIdentifier="76b88522-5251-47bc-9806-0e88a26c5bc2" Text="[ParsedDate.ToString(&quot;MM/dd/yyyy&quot;)]" Version="V5">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="btats.odoo.com/odoo/customer-invoices/7" ContentHash="9uBBOqc2t0WCSnvelekTKA" DesignTimeRectangle="751, 399, 489, 24" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='invoice_date_0' tag='INPUT' type='text' class='o_input cursor-pointer text-primary' placeholder='Today' aaname='Invoice Date' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="4433ba62-e30b-4c6b-9496-5cdb73f0e5e0" InformativeScreenshot="1fce0dda8d06769bc803985504bd543f.png" IsResponsive="True" Reference="Eieooa4AokeKB5AaXhMR2A/4cy_WoI1l0eeykxaoeFA0A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Draft Invoice' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="656, 399, 79, 21" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Invoice Date' tag='LABEL' type='' class='o_form_label' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Invoice Date' /&gt;" Guid="0106b932-792e-4dbe-9ed5-9c37d54bc221" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click 'Dec 20(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="522,190" sap2010:WorkflowViewState.IdRef="NClick_12" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="76b88522-5251-47bc-9806-0e88a26c5bc2" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="btats.odoo.com/odoo/customer-invoices/27" CVScreenId="89d0784f-bf18-4222-9982-efffbc67ac12" ContentHash="T6wiWM56T02WI25RosCg8g" CvTextArea="750, 441, 45, 13" CvTextArgument="Dec 20" CvType="Text" DesignTimeRectangle="751, 436, 218, 24" ElementType="Button" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='invoice_date_due_0' tag='BUTTON' type='' class='o_input o_daterange_start w-100 text-start' aaname='Dec 20' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Dec 20' /&gt;" Guid="6570dcfd-b5de-45f8-a61b-302d7bf1bd7b" InformativeScreenshot="e91092432a19ae4243effd7491c2b919.png" Reference="Eieooa4AokeKB5AaXhMR2A/njwybdl1BkGrnRa6CFkkyw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Draft Credit Note' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="89d0784f-bf18-4222-9982-efffbc67ac12" CvTextArea="655, 440, 62, 13" CvTextArgument="Due Date" CvType="Text" DesignTimeRectangle="656, 436, 60, 21" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Due Date' tag='LABEL' type='' class='o_form_label' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Due Date' /&gt;" Guid="9e7d7e92-8ab0-496c-a1e6-817e69436d15" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" ClipboardMode="Never" DisplayName="Type Into 'Dec 18'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="522,251" sap2010:WorkflowViewState.IdRef="NTypeInto_10" InteractionMode="DebuggerApi" ScopeIdentifier="76b88522-5251-47bc-9806-0e88a26c5bc2" Text="[ParsedDate.AddMonths(1).ToString(&quot;MM/dd/yyyy&quot;)]" Version="V5">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="btats.odoo.com/odoo/customer-invoices/27" ContentHash="ndKjBB6gsUqrf3OVgLq4Sw" DesignTimeRectangle="751, 436, 218, 24" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='invoice_date_due_0' tag='INPUT' type='text' class='o_input cursor-pointer text-primary' placeholder='Date' aaname='Due Date' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="f1bab23d-9e0e-40e1-a02c-ac18cd90bb5e" InformativeScreenshot="34cb177d7e0f739c1dcd40aa743e8852.png" IsResponsive="True" Reference="Eieooa4AokeKB5AaXhMR2A/WCumCsuAz0-IPUL7UPNJoA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Draft Credit Note' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="34e6d3b4-108d-4bdf-bd3e-c5061541aecc" CvTextArea="655, 440, 61, 13" CvTextArgument="Due Date" CvType="Text" DesignTimeRectangle="656, 436, 60, 21" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Due Date' tag='LABEL' type='' class='o_form_label' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Due Date' /&gt;" Guid="2d9a6ba5-e0f6-4120-81cb-e7cf83f402db" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" ClipboardMode="Never" DisplayName="Type Into 'Customer'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="522,251" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="DebuggerApi" ScopeIdentifier="76b88522-5251-47bc-9806-0e88a26c5bc2" Text="[InvoiceData.Data.GetFieldValue(&quot;Customer ID&quot;).Value.ToString+&quot;(&quot;+InvoiceData.Data.GetFieldValue(&quot;Contact Name&quot;).Value.ToString +&quot;)&quot;]" Version="V5">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="btats.odoo.com/odoo/customer-invoices/7" ContentHash="SbTLOF9QSU6pWE9dIpiZSg" DesignTimeRectangle="118, 399, 506, 24" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='partner_id_0' tag='INPUT' type='text' class='o-autocomplete--input o_input pe-3 text-truncate' placeholder='Search a name or Tax ID...' aaname='Customer' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="d0800bd8-33d6-40dc-b7d3-6dbcd98a6d32" InformativeScreenshot="0c2871b7b035182bd02b8354a7507ea5.png" IsResponsive="True" Reference="Eieooa4AokeKB5AaXhMR2A/fW2OEDvaUk6LAvoDiDsttw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Draft Invoice' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="41, 399, 61, 21" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='o_form_label' aaname='Customer' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Customer' /&gt;" Guid="5c2530bf-a25f-40e8-a865-fd9753ef9955" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NCheckState DisplayName="Check App State 'GALED(Eduardo Saavedra)'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="522,1225" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="76b88522-5251-47bc-9806-0e88a26c5bc2" Timeout="0.5" Version="V5">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,278" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'GALED(Eduardo Saavedra)(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,218" sap2010:WorkflowViewState.IdRef="NClick_9" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="76b88522-5251-47bc-9806-0e88a26c5bc2" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="btats.odoo.com/odoo/customer-invoices/22" ContentHash="BfSEMVUHKkq07ceB0rDe6w" DesignTimeRectangle="139, 436, 174, 19" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='partner_id_0_0_0' tag='SPAN' /&gt;" Guid="978fb8d4-7aff-4e2c-9bae-d08d33f2cf89" InformativeScreenshot="0318021be9ebee0f10127438120df53a.png" Reference="Eieooa4AokeKB5AaXhMR2A/n_Um-vukDkGv0M8_RXPQYA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Draft Invoice' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,682" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Create and edit...'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,190" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="76b88522-5251-47bc-9806-0e88a26c5bc2" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="btats.odoo.com/odoo/customer-invoices/7" ContentHash="cmVYBCOFckOjNpYy1VPg_Q" DesignTimeRectangle="119, 459, 214, 27" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Create and edit...' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;a' /&gt;" Guid="c1e3bc93-1a22-47c9-a11e-5ea18736da1c" InformativeScreenshot="55fd10380d9fc397b685463f88d27425.png" Reference="Eieooa4AokeKB5AaXhMR2A/RVkPMd_cPE6TUXMgLxWYaQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Draft Invoice' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" ClipboardMode="Never" DisplayName="Type Into 'INPUT phone_0'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,251" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="DebuggerApi" ScopeIdentifier="76b88522-5251-47bc-9806-0e88a26c5bc2" Text="[InvoiceData.Data.GetFieldValue(&quot;Phone Number&quot;).Value.ToString]" Version="V5">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="btats.odoo.com/odoo/customer-invoices/7" ContentHash="y9KcAhR2uEqBWEkRN0rgdw" DesignTimeRectangle="662, 471, 379, 24" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='phone_0' tag='INPUT' /&gt;" Guid="298934d0-9482-43d1-bece-13cbe77e29e9" InformativeScreenshot="2b24c71972caf0eae5f37d32b37ebf04.png" Reference="Eieooa4AokeKB5AaXhMR2A/RpVlHznvtkig44Pw-quTMQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Draft Invoice' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,181" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="76b88522-5251-47bc-9806-0e88a26c5bc2" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="btats.odoo.com/odoo/customer-invoices/7" ContentHash="NuNPbvEPok-1Thvc8WTe-w" DesignTimeRectangle="495, 848, 51, 33" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Save' parentid='dialog_0' tag='BUTTON' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;footer&amp;gt;button' innertext='Save' /&gt;" Guid="580eb353-e879-44e6-bf82-200b11fae3ae" InformativeScreenshot="15359b2594e38298229f30a1a9971fc7.png" Reference="Eieooa4AokeKB5AaXhMR2A/mXvhDR5WVUWso_ybw6qCSw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Draft Invoice' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="btats.odoo.com/odoo/customer-invoices/19" ContentHash="SwBtfEfcBUmVY25IE6qqKA" DesignTimeRectangle="139, 436, 174, 19" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='partner_id_0_0_0' tag='SPAN' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;a&amp;gt;span' isleaf='1' /&gt;" Guid="51a67868-88b1-400e-990b-33fe4e17f803" InformativeScreenshot="4d97d438437ec59fd267298186b2ea4e.png" Reference="Eieooa4AokeKB5AaXhMR2A/n0SYXpDiJ0uy8UX9TZ5BEQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Draft Invoice' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+            <Assign sap:VirtualizedContainerService.HintSize="522,175" sap2010:WorkflowViewState.IdRef="Assign_10">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[AddLineIndex]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">[2]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[rowIndex]" DataTable="[ResultDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="522,2194" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="520,2012" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Add a line'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="486,190" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="76b88522-5251-47bc-9806-0e88a26c5bc2" Version="V5">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="btats.odoo.com/odoo/customer-invoices/31" ContentHash="0OIqpl8AqkWWIAnNn6s1_w" DesignTimeRectangle="59, 646, 62, 19" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='{0}' tag='A' /&gt;&quot;, addlineindex)]" Guid="23fa5713-67f4-4c7c-bdfd-2fc32d09a9c7" InformativeScreenshot="d0f3d6f0dfbf24d2fc71a08416d501e9.png" Reference="Eieooa4AokeKB5AaXhMR2A/UFPy6Mm62Uu4J2rTJ9w7tg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Draft Credit Note Invoice10366 2016-11-28' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,389" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,278" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click 'TD'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,218" sap2010:WorkflowViewState.IdRef="NClick_15" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="76b88522-5251-47bc-9806-0e88a26c5bc2" Version="V5">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="btats.odoo.com/odoo/customer-invoices/34" ContentHash="ZpI6aid-SEGyDobD79sOAQ" DesignTimeRectangle="54, 635, 851, 41" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl name='name' tableRow='{0}' tag='TD' /&gt;&quot;, AddLineIndex)]" Guid="cf6e602b-3fef-4237-990e-b11f34462370" InformativeScreenshot="f6d4dbe8f26372640a03ec1e8a52e46e.png" Reference="Eieooa4AokeKB5AaXhMR2A/g1PqeSZrPkeL2FND2jT_Ag" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Draft Credit Note Invoice10366 2016-11-28' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                    </ui:CommentOut>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" ClipboardMode="Never" DisplayName="Type Into 'TEXTAREA'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="486,251" sap2010:WorkflowViewState.IdRef="NTypeInto_5" InteractionMode="DebuggerApi" ScopeIdentifier="76b88522-5251-47bc-9806-0e88a26c5bc2" Text="[row(&quot;Description&quot;).ToString]" Version="V5">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="btats.odoo.com/odoo/customer-credit-notes/41" ContentHash="l9-S7K5lGUeD19XMGAkNEA" DesignTimeRectangle="59, 571, 841, 21" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='{0}' tag='TEXTAREA' /&gt;&quot;, AddLineIndex)]" Guid="6404a95b-1323-4eb3-8cc0-d312c2fad9b3" InformativeScreenshot="48101872d3ead641e955cfc4918dd18a.png" Reference="Eieooa4AokeKB5AaXhMR2A/3P8VjTZ_Pkax4yARuz7Gdg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Draft Credit Note' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click '0.00(3)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="486,227" sap2010:WorkflowViewState.IdRef="NClick_13" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="76b88522-5251-47bc-9806-0e88a26c5bc2" Version="V5">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="btats.odoo.com/odoo/customer-invoices/33" ContentHash="oMFshGJn3UCPGG2EmP8C2w" DesignTimeRectangle="905, 609, 102, 41" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl name='quantity' tableRow='{0}' tag='TD' /&gt;&quot;, AddLineIndex)]" Guid="44c3da54-7058-4bed-b667-4caa34567d5b" InformativeScreenshot="806df7174432b08b07c019941f05f071.png" Reference="Eieooa4AokeKB5AaXhMR2A/ch_KQZ1stEWuyxjHz-MrnA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Draft Credit Note Invoice10366 2016-11-28' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      </uix:NClick.Target>
+                      <uix:NClick.VerifyOptions>
+                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionOptions.Retry>
+                          <uix:VerifyExecutionOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionOptions.Timeout>
+                        </uix:VerifyExecutionOptions>
+                      </uix:NClick.VerifyOptions>
+                    </uix:NClick>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" ClipboardMode="Never" DisplayName="Type Into '0.00(1)'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="486,251" sap2010:WorkflowViewState.IdRef="NTypeInto_7" InteractionMode="SameAsCard" ScopeIdentifier="76b88522-5251-47bc-9806-0e88a26c5bc2" Text="[row(&quot;Quantity&quot;).ToString]" Version="V5">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="btats.odoo.com/odoo/customer-credit-notes/41" ContentHash="TMd4_fPM9Uq5tkMIAgQjsw" DesignTimeRectangle="909, 571, 93, 21" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='{0}' tag='INPUT' /&gt;&quot;, AddLineIndex)]" Guid="dd9ce8d2-6755-4fe7-ac73-b86bca3e8d17" InformativeScreenshot="4565a53287e03c910dea0e825e8a5154.png" Reference="Eieooa4AokeKB5AaXhMR2A/Y7azxO3-TUGehwSQ31zRFQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Draft Credit Note' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click '0.00(4)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="486,227" sap2010:WorkflowViewState.IdRef="NClick_14" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="76b88522-5251-47bc-9806-0e88a26c5bc2" Version="V5">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="btats.odoo.com/odoo/customer-invoices/33" ContentHash="nHtESylQLk24tbOb3LfXEw" DesignTimeRectangle="1007, 609, 102, 41" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl name='price_unit' tableRow='{0}' tag='TD' /&gt;&quot;, AddLineIndex)]" Guid="59435df6-1281-4d18-9f28-f60fbafc6497" InformativeScreenshot="f40a262819e78ce79bbd0f3dbff22531.png" Reference="Eieooa4AokeKB5AaXhMR2A/GLjXFNX5FUOICoLCsg56Yg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Draft Credit Note Invoice10366 2016-11-28' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      </uix:NClick.Target>
+                      <uix:NClick.VerifyOptions>
+                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionOptions.Retry>
+                          <uix:VerifyExecutionOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionOptions.Timeout>
+                        </uix:VerifyExecutionOptions>
+                      </uix:NClick.VerifyOptions>
+                    </uix:NClick>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" ClipboardMode="Never" DisplayName="Type Into '0.00(2)'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="486,251" sap2010:WorkflowViewState.IdRef="NTypeInto_8" InteractionMode="DebuggerApi" ScopeIdentifier="76b88522-5251-47bc-9806-0e88a26c5bc2" Text="[(CDbl(Row(&quot;Unit Price&quot;)) * CDbl(GlobalVariablesNamespace.GlobalVariables.ExchangeRate)).ToString()]" Version="V5">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="btats.odoo.com/odoo/customer-credit-notes/41" ContentHash="-hz0YcVFHU68PAUhA3CCig" DesignTimeRectangle="1012, 571, 92, 21" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl parentname='price_unit' tableRow='{0}' tag='INPUT' /&gt;&quot;, AddLineIndex)]" Guid="db757a05-fe72-4f6e-9381-a588393586e1" InformativeScreenshot="0fdd8924783b25ac92a928445defcf42.png" Reference="Eieooa4AokeKB5AaXhMR2A/gHyGfZdZ-0Wojf53XPAzBA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Draft Credit Note' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <Assign sap:VirtualizedContainerService.HintSize="486,166" sap2010:WorkflowViewState.IdRef="Assign_11">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Int32">[AddLineIndex]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Int32">[AddLineIndex+1]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEachRow>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Confirm'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="522,183" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="76b88522-5251-47bc-9806-0e88a26c5bc2" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="btats.odoo.com/odoo/customer-invoices/7" ContentHash="-Mhdp6tWKkitBykLZ8yEAA" DesignTimeRectangle="35, 267, 51, 19" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl parentname='action_post' tag='SPAN' type='' class='' aaname='Confirm' matching:parentname='fuzzy' fuzzylevel:parentname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Confirm' /&gt;" Guid="ff2940f2-60c9-4472-8454-4c0ab4a7bcc3" InformativeScreenshot="94140b3ec2c7b466423f6b4c58491e3b.png" Reference="Eieooa4AokeKB5AaXhMR2A/HR-ncAVDK022wS-p8hTUHA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Draft Invoice invoice test' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="24, 260, 73, 33" ElementType="Button" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='object' class='btn btn-primary' aaname='Confirm' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Confirm' /&gt;" Guid="a7f21973-d0d3-4fd4-b080-5b0edeb3f239" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1048" BrowserType="Chrome" ContentHash="V_sVCpLXgESw5BQ2eFzVPA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEOSURBVDhPrVLBkYMwDKQESkgJKSHPi+2boYPwSGzI59bM/S+dXDqhBEqgBEpIJCKMY8iPndFntVrJsrLNgQJ5o+yfV6732j0kuka7fxTVTmTr8Lo+eW2HqDCNAUcLkb/DG/ezLGCzNcP6JGUv8GixEMa1MNVB0hnUZU98OxvQJAfkkubR7X1KcrHQC1A+mDTG3oTm8W0XDNR1L/QCPNWko+iFHp0nchDqI+KnCrWNQfjzX3MOy0uB4srLfDVTthN6fNstJGhRQi/AuUkHOiyh2bnMk/9u+eskTQ3OvLzoG+2Ar+QqoapyFszCxHgM6A/XCF1jrWAO6vxdlSJfB49GHe6IboOi5z29Xd82yLIn4sL3E3R384MAAAAASUVORK5CYII=" sap2010:WorkflowViewState.IdRef="TargetApp_2" InformativeScreenshot="5eb2ac78664755378b043de78cea33ed.jpg" Reference="Eieooa4AokeKB5AaXhMR2A/c33VgrDQ8E2Wy9buZMuPOw" Selector="&lt;html app='chrome.exe' url='https://btats.odoo.com*' /&gt;" Url="https://btats.odoo.com*" Version="V2" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

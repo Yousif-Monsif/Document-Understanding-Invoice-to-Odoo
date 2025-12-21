@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="EP_nMOW0IEuRzbwlD37B5w" Reference="Eieooa4AokeKB5AaXhMR2A/DqT3FN2UC0qNgxAy8PMhSw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="btats.odoo.com/odoo/customer-invoices/30" DesignTimeRectangle="41, 292, 899, 43" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='name_0' tag='INPUT' class='o_input' parentclass='o_field_widget o_field_char' /&gt;" Guid="9c0cc590-ff61-4931-a965-a2689504f1f9" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Draft Credit Note' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="41, 267, 139, 19" ElementType="Text" FullSelectorArgument="&lt;webctrl parentname='move_type' tag='SPAN' aaname='Customer Credit Note' /&gt;" Guid="2b8e22af-fa2f-4b3d-a7d2-8c0b9073d00d" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="f75595507128a78f92bd844dfe153a0e.png" xmlns="">0TNtt7FmqB02X6yz85PtAkw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

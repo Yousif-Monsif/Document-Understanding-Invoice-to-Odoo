@@ -1,0 +1,6 @@
+{
+  "Name": "Process Monthly Invoices",
+  "ProjectType": "Process",
+  "Description": "Robotic Enterprise Framework to Prcess monthly invoices using document understanding and api to find exchange rate",
+  "MainFile": "Main.xaml"
+}

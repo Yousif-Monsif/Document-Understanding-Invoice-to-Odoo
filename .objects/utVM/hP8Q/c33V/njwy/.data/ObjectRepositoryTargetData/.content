@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="T6wiWM56T02WI25RosCg8g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="btats.odoo.com/odoo/customer-invoices/27" CVScreenId="89d0784f-bf18-4222-9982-efffbc67ac12" CvTextArea="750, 441, 45, 13" CvTextArgument="Dec 20" CvType="Text" DesignTimeRectangle="751, 436, 218, 24" ElementType="Button" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='invoice_date_due_0' tag='BUTTON' type='' class='o_input o_daterange_start w-100 text-start' aaname='Dec 20' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Dec 20' /&gt;" Guid="6570dcfd-b5de-45f8-a61b-302d7bf1bd7b" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Draft Credit Note' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="89d0784f-bf18-4222-9982-efffbc67ac12" CvTextArea="655, 440, 62, 13" CvTextArgument="Due Date" CvType="Text" DesignTimeRectangle="656, 436, 60, 21" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Due Date' tag='LABEL' type='' class='o_form_label' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Due Date' /&gt;" Guid="9e7d7e92-8ab0-496c-a1e6-817e69436d15" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="e91092432a19ae4243effd7491c2b919.png" xmlns="">03rehJUXS3kqIFL2csPwEaA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

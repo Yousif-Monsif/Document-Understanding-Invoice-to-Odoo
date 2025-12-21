@@ -1,0 +1,2 @@
+﻿FieldId,FieldName,IsMissing,DataSource,DataVersion,OperatorConfirmed,Values,ValidatorNotes,ValidatorNotesInfo
+items,items,False,0,0,False,UiPath.DocumentProcessing.Contracts.Results.ResultsTableValue[],,

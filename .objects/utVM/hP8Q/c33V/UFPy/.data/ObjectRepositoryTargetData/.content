@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="0OIqpl8AqkWWIAnNn6s1_w" Reference="Eieooa4AokeKB5AaXhMR2A/UFPy6Mm62Uu4J2rTJ9w7tg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="btats.odoo.com/odoo/customer-invoices/31" DesignTimeRectangle="59, 646, 62, 19" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='{0}' tag='A' /&gt;&quot;, addlineindex)]" Guid="23fa5713-67f4-4c7c-bdfd-2fc32d09a9c7" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Draft Credit Note Invoice10366 2016-11-28' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="d0f3d6f0dfbf24d2fc71a08416d501e9.png" xmlns="">0n6qL-WJtEU61GkmTPukTJw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData DefaultValue="0" Name="addlineindex" />
+    </scg:List>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

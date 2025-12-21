@@ -1,0 +1,14 @@
+﻿{
+  "Name": "GALED(Eduardo Saavedra)",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "n0SYXpDiJ0uy8UX9TZ5BEQ",
+  "Reference": "Eieooa4AokeKB5AaXhMR2A/n0SYXpDiJ0uy8UX9TZ5BEQ",
+  "ParentRef": "Eieooa4AokeKB5AaXhMR2A/c33VgrDQ8E2Wy9buZMuPOw",
+  "Created": "2025-12-20T03:12:02.5552102Z",
+  "Updated": "2025-12-20T03:12:02.5552102Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.16.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="-Mhdp6tWKkitBykLZ8yEAA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="btats.odoo.com/odoo/customer-invoices/7" DesignTimeRectangle="35, 267, 51, 19" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl parentname='action_post' tag='SPAN' type='' class='' aaname='Confirm' matching:parentname='fuzzy' fuzzylevel:parentname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Confirm' /&gt;" Guid="ff2940f2-60c9-4472-8454-4c0ab4a7bcc3" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Draft Invoice invoice test' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="24, 260, 73, 33" ElementType="Button" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='object' class='btn btn-primary' aaname='Confirm' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Confirm' /&gt;" Guid="a7f21973-d0d3-4fd4-b080-5b0edeb3f239" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="94140b3ec2c7b466423f6b4c58491e3b.png" xmlns="">0WqSuv1BB5EesIAudO1ybRw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

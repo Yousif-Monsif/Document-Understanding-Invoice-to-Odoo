@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="uX9bq9s_IUCtuxGGqXeGdA" Reference="Eieooa4AokeKB5AaXhMR2A/S40MxJA5RkaKXeo-0xpOIw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="btats.odoo.com/odoo/customer-invoices/49" DesignTimeRectangle="20, 736, 25, 21" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='oe-dropzone-hook' parentname='narration' tag='DIV' /&gt;" Guid="8d324f33-afa9-495f-874f-5f67cd474e63" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Draft Invoice' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="9962f5e461ac1ee11f12279c2d494407.png" xmlns="">0zyJfkrCrYkqVSy14WjjxxQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="fXrj4w-xgkWDBCTG7yekhQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="btats.odoo.com/odoo/customer-invoices/51" DesignTimeRectangle="1883, 157, 26, 26" ElementType="Icon" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='User' tag='IMG' /&gt;" Guid="4a067677-1bf4-4c50-8a66-b16052d6c873" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Invoice10366 2016-11-28' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="104b06b401b2c060fe37576e95cad5e0.png" xmlns="">0pZLXf2Nk40CzEWELKIUcxA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

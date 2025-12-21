@@ -1,0 +1,14 @@
+﻿{
+  "Name": "BUTTON labelVisibilityB…",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "Nz5MJsy1Rk6srCT7dYFQqg",
+  "Reference": "Eieooa4AokeKB5AaXhMR2A/Nz5MJsy1Rk6srCT7dYFQqg",
+  "ParentRef": "Eieooa4AokeKB5AaXhMR2A/c33VgrDQ8E2Wy9buZMuPOw",
+  "Created": "2025-12-13T13:00:32.0598273Z",
+  "Updated": "2025-12-13T13:00:32.0598273Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.16.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

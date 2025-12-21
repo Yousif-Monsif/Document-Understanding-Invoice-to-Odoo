@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="cAdBgJGdbkKA-qurQlMSAA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="btats.odoo.com/odoo/customer-invoices/27" CVScreenId="8c1c9230-f0e6-4a23-a0bd-03c2c42f499a" CvElementArea="161, 217, 18, 18" CvType="Icon" DesignTimeRectangle="161, 219, 18, 14" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;i' tag='I' /&gt;" Guid="b686a242-0828-4127-85c1-0fad5559555d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABYAAAASCAYAAABfJS4tAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD+SURBVDhP3ZM9CsJAEIU9jYUH8AbiEbSxChYirIUgCBYSCFiLlWkCgjZpjIidNgaLxC5CtokIe4/nxkQ0OBHFH9DiK5bhfQyzvEw2l8cn+FuxhhkXEELAn2vE/JY7Yobheg9/qaPRtOBIaSgWriXfOlZ8D1tnRC4iVdyZ8kh0Fw+TOp1P37hqwA4o2YVgY0ChshJSXKgwqP0FnEMsCbaYtMtyVkZrvEVwlrsmVMZQKt46SPFwEwdjnJFyNVdguMm5rSfzId8Vh6eoqeYDp7DQaz9xihOf+LyQ2tgjZUk4Zl06n76xLMhgyeGvDXTeWZAkstK7SPyGSr/Gr4nzOAJSzx9KqWiV3QAAAABJRU5ErkJggg==" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Draft Invoice' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="3b624f69d3fccc55d591273f6abf823e.png" xmlns="">0ZE2Nx3wytESYADzKhqqd9A</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

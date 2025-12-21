@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="w-hsjEDG5E6q_4LtcttWAQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="-8, -8, 1936, 1048" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEOSURBVDhPrVLBkYMwDKQESkgJKSHPi+2boYPwSGzI59bM/S+dXDqhBEqgBEpIJCKMY8iPndFntVrJsrLNgQJ5o+yfV6732j0kuka7fxTVTmTr8Lo+eW2HqDCNAUcLkb/DG/ezLGCzNcP6JGUv8GixEMa1MNVB0hnUZU98OxvQJAfkkubR7X1KcrHQC1A+mDTG3oTm8W0XDNR1L/QCPNWko+iFHp0nchDqI+KnCrWNQfjzX3MOy0uB4srLfDVTthN6fNstJGhRQi/AuUkHOiyh2bnMk/9u+eskTQ3OvLzoG+2Ar+QqoapyFszCxHgM6A/XCF1jrWAO6vxdlSJfB49GHe6IboOi5z29Xd82yLIn4sL3E3R384MAAAAASUVORK5CYII=" Selector="&lt;html app='chrome.exe' title='Odoo' /&gt;" Url="https://btats.odoo.com/web/login?redirect=%2Fodoo%3F" Version="V2">
+      <imageRef attrName="InformativeScreenshot" originalValue="8ea367fbffa322406076e0f911070bd4.jpg" xmlns="">0uBkt8KNmnkqGEqEtkX3SBg</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

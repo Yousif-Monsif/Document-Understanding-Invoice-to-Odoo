@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="rTfvwe_y2ky8-5JP19OzbA" Reference="Eieooa4AokeKB5AaXhMR2A/_R66Gst7g0KjX4CSqaksbw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="fQj4OkPYGUKb8oSs6vsZpQ" Reference="Eieooa4AokeKB5AaXhMR2A/_R66Gst7g0KjX4CSqaksbw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
     <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="btats.odoo.com/web/login" DesignTimeRectangle="834, 329, 268, 35" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='login' tag='INPUT' type='text' class='form-control' placeholder='Enter your email' aaname='Email Choose a user ' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="c6853d3a-e644-49bb-9e4b-719cbf70472f" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Odoo' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
       <TargetAnchorable.Anchors>
@@ -7,7 +7,7 @@
           <Target DesignTimeRectangle="834, 300, 268, 21" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='form-label d-flex justify-content-between' aaname='Email' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Email&amp;#xA;Choose a user' /&gt;" Guid="29aa5a62-afb6-4a4a-8604-a01d742963a4" SearchSteps="FuzzySelector" />
         </scg:List>
       </TargetAnchorable.Anchors>
-      <imageRef attrName="InformativeScreenshot" originalValue="095bc763da7f7c08eae74d5c6f2c2f27.png" xmlns="">0_TR895qna0WKR1S_MVeeJA</imageRef>
+      <imageRef attrName="InformativeScreenshot" originalValue="9dd49e57f2a6c255a011bc8f3261b30e.png" xmlns="">01l9iRUGFhkmoP9KD2COnwQ</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">TypeInto</x:String>
   </ObjectRepositoryTargetData.Data>

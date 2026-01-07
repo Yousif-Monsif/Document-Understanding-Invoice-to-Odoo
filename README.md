@@ -1,39 +1,84 @@
-### Documentation is included in the Documentation folder ###
+# Invoice-to-Odoo Automation (UiPath RPA)
 
+## 📌 Project Overview
+This project is an **end-to-end Invoice Processing automation** built using **UiPath**, designed to extract data from PDF invoices and upload it into **Odoo ERP**.
 
-### REFrameWork Template ###
-**Robotic Enterprise Framework**
+The automation demonstrates a real-world RPA use case combining **Document Understanding**, **API integration**, and **ERP interaction**, implemented following **REFramework best practices**.
 
-* Built on top of *Transactional Business Process* template
-* Uses *State Machine* layout for the phases of automation project
-* Offers high level logging, exception handling and recovery
-* Keeps external settings in *Config.xlsx* file and Orchestrator assets
-* Pulls credentials from Orchestrator assets and *Windows Credential Manager*
-* Gets transaction data from Orchestrator queue and updates back status
-* Takes screenshots in case of system exceptions
+---
 
+## 🎯 Business Use Case
+Manual invoice processing is time-consuming and error-prone.  
+This automation simulates how RPA can:
+- Read invoice PDFs
+- Extract and validate structured data
+- Perform currency conversion
+- Upload clean data into an ERP system
 
-### How It Works ###
+---
 
-1. **INITIALIZE PROCESS**
- + ./Framework/*InitiAllSettings* - Load configuration data from Config.xlsx file and from assets
- + ./Framework/*GetAppCredential* - Retrieve credentials from Orchestrator assets or local Windows Credential Manager
- + ./Framework/*InitiAllApplications* - Open and login to applications used throughout the process
+## ⚙️ Process Flow
+1. Invoice PDF files are provided as input
+2. UiPath Document Understanding extracts invoice data
+3. Extracted data is validated
+4. Exchange rate is retrieved using an external API
+5. Invoice values are converted to the target currency
+6. Final data is uploaded into **Odoo ERP**
+7. Process completes with success or exception handling
 
-2. **GET TRANSACTION DATA**
- + ./Framework/*GetTransactionData* - Fetches transactions from an Orchestrator queue defined by Config("OrchestratorQueueName") or any other configured data source
+---
 
-3. **PROCESS TRANSACTION**
- + *Process* - Process trasaction and invoke other workflows related to the process being automated 
- + ./Framework/*SetTransactionStatus* - Updates the status of the processed transaction (Orchestrator transactions by default): Success, Business Rule Exception or System Exception
+## 🛠️ Technologies & Tools Used
+- **UiPath Studio**
+- **REFramework**
+- **UiPath Document Understanding**
+- **REST API Integration**
+  - Exchange Rate API: https://exchangerate.host/
+- **Odoo ERP**
+- **PDF Invoice Processing**
 
-4. **END PROCESS**
- + ./Framework/*CloseAllApplications* - Logs out and closes applications used throughout the process
+---
 
+## 📂 Input
+- PDF invoices containing:
+  - Invoice details (date, total, currency)
+  - Line items (product, quantity, unit price)
 
-### For New Project ###
+---
 
-1. Check the Config.xlsx file and add/customize any required fields and values
-2. Implement InitiAllApplications.xaml and CloseAllApplicatoins.xaml workflows, linking them in the Config.xlsx fields
-3. Implement GetTransactionData.xaml and SetTransactionStatus.xaml according to the transaction type being used (Orchestrator queues by default)
-4. Implement Process.xaml workflow and invoke other workflows related to the process being automated
+## 📤 Output
+- Invoice records successfully created in **Odoo ERP**
+- Structured and validated invoice data
+- Converted currency values based on real-time exchange rates
+
+---
+
+## 🧠 Key Features
+- Modular and scalable REFramework design
+- Document Understanding with structured extraction
+- API integration for real-time data enrichment
+- Error handling and logging
+- Ready-to-extend for queues, emails, or storage buckets
+
+---
+
+## 🎥 Demo
+A short demo video showcasing the full automation flow is available on LinkedIn.  
+(See LinkedIn post for the video demonstration.)
+
+---
+
+## 📎 Notes
+- This project is built for **learning and portfolio purposes**
+- Invoice data and ERP environment are used for demonstration only
+
+---
+
+## 👤 Author
+**Yousif Monsif**  
+Junior RPA Developer (UiPath)
+
+---
+
+## 🔗 Repository
+Feel free to explore the workflows, suggest improvements, or use this project as a reference for similar RPA use cases.

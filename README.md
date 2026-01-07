@@ -62,12 +62,6 @@ This automation simulates how RPA can:
 
 ---
 
-## 🎥 Demo
-A short demo video showcasing the full automation flow is available on LinkedIn.  
-(See LinkedIn post for the video demonstration.)
-
----
-
 ## 📎 Notes
 - This project is built for **learning and portfolio purposes**
 - Invoice data and ERP environment are used for demonstration only
